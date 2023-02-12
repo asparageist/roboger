@@ -8,6 +8,10 @@ Test: "it should return numbers from 0 to inputNumber"
 Code: ROBOGER(5);
 Expected Output: [0,1,2,3,4,5]
 
+Test: "it should split double digit numbers into arrays"
+Code: ROBOGER(15);
+Expected Output [0], [1], ... , [1,5]
+
 Test: "it should identify numbers containing the intiger 1, replacing them with BEEP"
 Code: ROBOGER(5);
 Expected Output: [0,BEEP,2,3,4,5]
