@@ -1,3 +1,40 @@
+# _ROBOGER_
+
+# https://github.com/asparageist/roboger
+
+#### By Joseph Murray
+
+#### A strange application rendering a response to user input data.
+
+## Technologies Used
+
+* JavaScript
+* HTML
+* CSS
+* Markdown
+* Bootstrap
+
+## Description
+
+This application will take a number from the user and count up to it from zero, replacing all numbers containing the intiger 1 with BEEP, 2 with BOOP and 3 with WON'T YOU BE MY NEIGHBOR. It can be used multiple times without refreshing.
+
+## Setup/Installation Requirements
+
+* Download my repository to your Desktop
+* Open index.html
+
+## Known Bugs
+
+* None forthcoming
+
+## License
+
+* Any questions, comments, concerns or contributions, contact the author at josephwmurray@gmail.com
+
+Copyright (c) 2/11/2023 Joseph Murray
+
+## Project TDD follows:
+ 
 Describe: ROBOGER()
 
 Test: "it should recognize if the input is a number"
