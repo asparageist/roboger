@@ -8,16 +8,13 @@ window.onload = function() {
     hideError();
     const displayArray = [];
     const inputNumber = parseInt(document.querySelector("input#inputNumber").value);
-    if (inputNumber != Number) {
+    if (isNaN(inputNumber)) {
       document.getElementById("error-message").removeAttribute("class");
     } else {
-      for (i = 0; i < inputNumber.length; i++) {
-        console.log(i);
-        let arrayNum = inputNumber(i);
-        displayArray.push(arrayNum);
-        console.log(arrayNum);
+      for (i = 0; i <= inputNumber; i++) {
+        displayArray.push(i);
       };
+      
     };
-  console.log(displayArray);
   }
 }
