@@ -6,29 +6,33 @@ window.onload = function() {
   document.querySelector("form").onsubmit = function(event) {
     event.preventDefault();
     hideError();
+    const inputArray = [];
     const displayArray = [];
     const inputNumber = parseInt(document.querySelector("input#inputNumber").value);
-    const BEEP = "BEEP";
-    const BOOP = "BOOP";
-    const WONT = "WON'T YOU BE MY NEIGHBOR";
     if (isNaN(inputNumber)) {
       document.getElementById("error-message").removeAttribute("class");
     } else {
       for (i = 0; i <= inputNumber; i++) {
-        displayArray.push(i);
+        inputArray.push(i);
       };
-      for (i = 0; i < displayArray.length; i++) {
+      for (i = 0; i < inputArray.length; i++) {
         const testNumber = (i);
         const testNumberString = testNumber.toString();
         const testNumberArray = testNumberString.split('');
-        console.log(testNumberArray);
-        // for (dAi = 0; dAi < testNumberArray.length; dAi++) {
-          // let arrayInt = parseInt(dAi);
-          // if (arrayInt === 1) {
-          // }
-        // }
+        for (dAi = 0; dAi < testNumberArray.length; dAi++) {
+          let arrayInt = parseInt(testNumberArray[dAi]);
+          if (arrayInt === 1) {
+            displayArray.push("BEEP");
+          } else if (arrayInt === 2) {
+            displayArray.push("BOOP");
+          } else if (arrayInt === 3) {
+            displayArray.push("WON'T YOU BE MY NEIGHBOR");
+          } else {
+            displayArray.push(arrayInt);
+          }
+        }
       }
-      
-    };
+      console.log(displayArray);
+    }
   }
 }

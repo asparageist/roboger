@@ -24,4 +24,6 @@ Test: "it should identify numbers containing the intiger 3, replacing them with 
 Code: ROBOGER(5);
 Expected Output: [0,BEEP,BOOP,WONT YOU BE MY NEIGHBOR,4,5]
 
-Test: "
+Test: "it should fully replace double digit numbers"
+Code: ROBOGER(15);
+Expected Output: [1,2,...,9,BEEP,BOOP,WON'T YOU BE MY NEIGHBOR,BEEP,BEEP]
