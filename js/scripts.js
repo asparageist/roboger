@@ -33,17 +33,19 @@ window.onload = function() {
           }        
         }
         if (BEEP === true && BOOP === false && WONT === false) {
-          displayArray.push("BEEP");
+          displayArray.push(" BEEP");
         } else if (BOOP === true && WONT === false) {
-          displayArray.push("BOOP");
+          displayArray.push(" BOOP");
         } else if (WONT === true) {
-          displayArray.push("WON'T YOU BE MY NEIGHBOR");
+          displayArray.push(" WON'T YOU BE MY NEIGHBOR");
         } else {
-          displayArray.push(testNumber);
+          displayArray.push(" " + testNumber);
         }
       }
-
-      console.log(displayArray);
+      document.getElementById("ROBOGER").removeAttribute("class");
+      const h1Display = document.getElementById("outputHere");
+      h1Display.innerHTML = h1Display.innerHTML.replace(displayArray, displayArray);
+      document.getElementById("outputHere").innerHTML=displayArray;
     }
   }
 }
