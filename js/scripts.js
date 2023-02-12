@@ -19,19 +19,30 @@ window.onload = function() {
         const testNumber = (i);
         const testNumberString = testNumber.toString();
         const testNumberArray = testNumberString.split('');
+        let BEEP = false;
+        let BOOP = false;
+        let WONT = false;
         for (dAi = 0; dAi < testNumberArray.length; dAi++) {
           let arrayInt = parseInt(testNumberArray[dAi]);
           if (arrayInt === 1) {
-            displayArray.push("BEEP");
+            BEEP = true;
           } else if (arrayInt === 2) {
-            displayArray.push("BOOP");
+            BOOP = true;
           } else if (arrayInt === 3) {
-            displayArray.push("WON'T YOU BE MY NEIGHBOR");
-          } else {
-            displayArray.push(arrayInt);
-          }
+            WONT = true;
+          }        
+        }
+        if (BEEP === true && BOOP === false && WONT === false) {
+          displayArray.push("BEEP");
+        } else if (BOOP === true && WONT === false) {
+          displayArray.push("BOOP");
+        } else if (WONT === true) {
+          displayArray.push("WON'T YOU BE MY NEIGHBOR");
+        } else {
+          displayArray.push(testNumber);
         }
       }
+
       console.log(displayArray);
     }
   }
