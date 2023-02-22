@@ -1,7 +1,3 @@
-function hideError() {
-  document.getElementById("error-message").setAttribute("class", "hidden");
-}
-
 window.onload = function() {
   document.querySelector("form").onsubmit = function(event) {
     event.preventDefault();
@@ -9,7 +5,10 @@ window.onload = function() {
     const inputArray = [];
     const displayArray = [];
     const inputNumber = parseInt(document.querySelector("input#inputNumber").value);
-    if (isNaN(inputNumber)) {
+    function hideError() {
+      document.getElementById("error-message").setAttribute("class", "hidden");
+    }
+    if (isNaN(inputNumber) || (inputNumber < 0)) {
       document.getElementById("error-message").removeAttribute("class");
     } else {
       for (i = 0; i <= inputNumber; i++) {
