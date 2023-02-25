@@ -1,19 +1,34 @@
 window.onload = function() {
   document.querySelector("form").onsubmit = function(event) {
     event.preventDefault();
+
+    function hideError() {
+      document.getElementById("error-message").setAttribute("class", "hidden");
+    }
+
+    function isError() {
+      document.getElementById("error-message").removeAttribute("class");
+    }
+
+    function displayBeepBoop() {
+      document.getElementById("ROBOGER").removeAttribute("class");
+      const h1Display = document.getElementById("outputHere");
+      h1Display.innerHTML = h1Display.innerHTML.replace(displayArray, displayArray);
+      document.getElementById("outputHere").innerHTML=displayArray;
+    }
+
     hideError();
     const inputArray = [];
     const displayArray = [];
     const inputNumber = parseInt(document.querySelector("input#inputNumber").value);
-    function hideError() {
-      document.getElementById("error-message").setAttribute("class", "hidden");
-    }
+    
     if (isNaN(inputNumber) || (inputNumber < 0)) {
-      document.getElementById("error-message").removeAttribute("class");
+      isError();
     } else {
       for (i = 0; i <= inputNumber; i++) {
         inputArray.push(i);
       };
+
       for (i = 0; i < inputArray.length; i++) {
         const testNumber = (i);
         const testNumberString = testNumber.toString();
@@ -41,10 +56,7 @@ window.onload = function() {
           displayArray.push(" " + testNumber);
         }
       }
-      document.getElementById("ROBOGER").removeAttribute("class");
-      const h1Display = document.getElementById("outputHere");
-      h1Display.innerHTML = h1Display.innerHTML.replace(displayArray, displayArray);
-      document.getElementById("outputHere").innerHTML=displayArray;
-    }
+    displayBeepBoop();
+    }    
   }
 }
