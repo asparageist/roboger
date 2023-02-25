@@ -56,7 +56,7 @@ window.onload = function() {
           displayArray.push(" " + testNumber);
         }
       }
+    }
     displayBeepBoop();
-    }    
-  }
+  }    
 }
