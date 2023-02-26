@@ -23,7 +23,6 @@ function displayBeepBoop() {
 }
 
 const displayArray = [];
-
 function businessLogic() {
   const inputArray = [];
   const inputNumber = parseInt(document.querySelector("input#inputNumber").value);
